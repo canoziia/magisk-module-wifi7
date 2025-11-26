@@ -22,8 +22,7 @@ jobs:
 
       - name: Build Magisk Module Zip
         run: |
-          zip -j "${{ steps.vars.outputs.ZIP_NAME }}" module.prop customize.sh service.sh action.sh system.prop
-          zip -r "${{ steps.vars.outputs.ZIP_NAME }}" META-INF
+          zip -r "${{ steps.vars.outputs.ZIP_NAME }}" module.prop customize.sh service.sh action.sh system.prop META-INF
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
