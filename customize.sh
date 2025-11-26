@@ -1,5 +1,5 @@
 # Default Configuration
-DEFAULT_CC="US"
+DEFAULT_CC="NL"
 CONFIG_FILE="$MODPATH/wifi_config.prop"
 
 ui_print "- Setting default Country Code: $DEFAULT_CC"

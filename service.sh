@@ -10,7 +10,7 @@ done
 if [ -f "$MODDIR/wifi_config.prop" ]; then
   . "$MODDIR/wifi_config.prop"
 else
-  TARGET_CC="US"
+  TARGET_CC="NL"
 fi
 
 # Apply Country Code
