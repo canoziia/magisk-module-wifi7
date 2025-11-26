@@ -6,6 +6,7 @@ This Magisk module attempts to enable 6GHz WiFi and Hotspot capabilities on supp
 - **6GHz WiFi Support**: Unlocks the 6GHz band for connection.
 - **6GHz Hotspot**: Allows creating a hotspot on the 6GHz band.
 - **Country Code Selection**: Use the **Action** button in Magisk Manager to cycle through country codes (US, EU, JP, CN, DE, NL, CA) instantly.
+- **Automatic Updates**: Supports Magisk's built-in update check mechanism.
 
 ## Requirements
 - Android 13+ (Recommended for better 6GHz support)

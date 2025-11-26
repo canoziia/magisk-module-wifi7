@@ -38,3 +38,23 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update update.json
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Create new JSON content
+          cat <<EOF > update.json
+          {
+            "version": "${{ steps.vars.outputs.VERSION }}",
+            "versionCode": $(date +%s),
+            "zipUrl": "https://github.com/canoziia/magisk-module-wifi7/releases/download/${{ steps.vars.outputs.VERSION }}/${{ steps.vars.outputs.ZIP_NAME }}",
+            "changelog": "https://raw.githubusercontent.com/canoziia/magisk-module-wifi7/main/README.md"
+          }
+          EOF
+          
+          # Commit and push
+          git add update.json
+          git commit -m "Update update.json for ${{ steps.vars.outputs.VERSION }}"
+          git push

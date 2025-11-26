@@ -1,9 +1,3 @@
-SKIPUNZIP=1
-
-# Extract files
-ui_print "- Extracting module files"
-unzip -o "$ZIPFILE" 'module.prop' 'service.sh' 'system.prop' 'action.sh' -d "$MODPATH" >&2
-
 # Default Configuration
 DEFAULT_CC="US"
 CONFIG_FILE="$MODPATH/wifi_config.prop"

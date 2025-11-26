@@ -4,3 +4,4 @@ version=v1.0.0
 versionCode=100
 author=DarkNightLab
 description=Enables 6GHz WiFi and Hotspot by forcing country code. Selectable country code during install.
+updateJson=https://raw.githubusercontent.com/canoziia/magisk-module-wifi7/main/update.json
