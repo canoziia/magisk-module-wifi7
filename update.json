@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "version": "v1.0.9",
   "versionCode": 1764150406,
   "zipUrl": "https://github.com/canoziia/magisk-module-wifi7/releases/download/v1.0.9/WiFi7_6GHz_Enabler-v1.0.9.zip",
+=======
+  "version": "v1.0.11",
+  "versionCode": 111,
+  "zipUrl": "https://github.com/canoziia/magisk-module-wifi7/releases/download/v1.0.11/WiFi7_6GHz_Enabler-v1.0.11.zip",
+>>>>>>> 8e13ac8 (Restore META-INF with functional update-binary and bump to v1.0.11)
   "changelog": "https://raw.githubusercontent.com/canoziia/magisk-module-wifi7/main/README.md"
 }
