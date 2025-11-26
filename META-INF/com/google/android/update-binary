@@ -1,0 +1,93 @@
+##########################################################################################
+#
+# Magisk Module Installer Script
+#
+##########################################################################################
+##########################################################################################
+#
+# Instructions:
+#
+# 1. Place your files into system/ (or other partitions)
+# 2. Module info goes into module.prop
+# 3. User defined install script goes into customize.sh
+#
+##########################################################################################
+
+##########################################################################################
+# Config Flags
+##########################################################################################
+
+# Set to true if you do not want Magisk to mount the partitions for you
+SKIPMOUNT=false
+
+# Set to true if you want to clean up the module's directory before installation
+PROPFILE=false
+
+# Set to true if you want to keep the module's directory after installation
+POSTFSDATA=false
+
+# Set to true if you want to keep the module's directory after installation
+LATESTARTSERVICE=false
+
+##########################################################################################
+# Replace list
+##########################################################################################
+
+# List all directories you want to directly replace in the system
+# Construct your list in the following example
+# REPACE_EXAMPLE="
+# /system/app/Youtube
+# /system/priv-app/SystemUI
+# /system/priv-app/Settings
+# /system/framework
+# "
+
+# Construct your own list here
+REPLACE="
+"
+
+##########################################################################################
+#
+# Function Callbacks
+#
+# The following functions will be called by the installation framework.
+# You do not need to call them in your script.
+#
+##########################################################################################
+
+# !DO NOT! remove this function
+# This function will be called by the installation framework
+# You can add your own custom logic here
+#
+# $1: The path where the zip file is extracted
+# $2: The path to the module directory
+#
+on_install() {
+  ui_print "- Extracting module files"
+  unzip -o "$ZIPFILE" 'module.prop' 'service.sh' 'system.prop' 'action.sh' -d "$MODPATH" >&2
+  
+  # Default Configuration
+  DEFAULT_CC="US"
+  CONFIG_FILE="$MODPATH/wifi_config.prop"
+
+  ui_print "- Setting default Country Code: $DEFAULT_CC"
+  echo "TARGET_CC=$DEFAULT_CC" > "$CONFIG_FILE"
+
+  # Set permissions
+  set_perm_recursive "$MODPATH" 0 0 0755 0644
+  set_perm "$MODPATH/service.sh" 0 0 0755
+  set_perm "$MODPATH/action.sh" 0 0 0755
+  set_perm "$MODPATH/system.prop" 0 0 0644
+}
+
+# !DO NOT! remove this function
+# This function will be called by the installation framework
+# You can add your own custom logic here
+#
+# $1: The path where the zip file is extracted
+# $2: The path to the module directory
+#
+set_permissions() {
+  # The following is the default rule, DO NOT remove
+  set_perm_recursive "$MODPATH" 0 0 0755 0644
+}
