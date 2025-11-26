@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "version": "v1.0.5",
   "versionCode": 1764149037,
   "zipUrl": "https://github.com/canoziia/magisk-module-wifi7/releases/download/v1.0.5/WiFi7_6GHz_Enabler-v1.0.5.zip",
+=======
+  "version": "v1.0.6",
+  "versionCode": 106,
+  "zipUrl": "https://github.com/canoziia/magisk-module-wifi7/releases/download/v1.0.6/WiFi7_6GHz_Enabler-v1.0.6.zip",
+>>>>>>> 029be5d (Explicitly zip files and bump to v1.0.6)
   "changelog": "https://raw.githubusercontent.com/canoziia/magisk-module-wifi7/main/README.md"
 }
