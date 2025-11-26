@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Magisk Module Zip
         run: |
-          zip -r "${{ steps.vars.outputs.ZIP_NAME }}" . -x ".git/*" ".github/*" "README.md" ".gitignore"
+          zip -r "${{ steps.vars.outputs.ZIP_NAME }}" * -x ".git/*" ".github/*" "README.md" ".gitignore"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
@@ -57,4 +57,4 @@ jobs:
           # Commit and push
           git add update.json
           git commit -m "Update update.json for ${{ steps.vars.outputs.VERSION }}"
-          git push
+          git push origin HEAD:main
