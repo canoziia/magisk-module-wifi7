@@ -15,7 +15,7 @@ fi
 
 # Apply Country Code
 # Method 1: cmd wifi (Works on most modern Android)
-cmd wifi force-country-code enable $TARGET_CC
+cmd wifi force-country-code enabled $TARGET_CC
 
 # Method 2: setprop (Legacy/Backup)
 resetprop ro.boot.wificountrycode $TARGET_CC

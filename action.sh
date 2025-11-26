@@ -48,7 +48,7 @@ echo "-----------------------------------"
 echo "TARGET_CC=$NEXT_CC" > "$MODDIR/wifi_config.prop"
 
 # 2. Apply via cmd wifi
-cmd wifi force-country-code enable $NEXT_CC
+cmd wifi force-country-code enabled $NEXT_CC
 echo "Applied via cmd wifi: $?"
 
 # 3. Apply via resetprop

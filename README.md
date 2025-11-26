@@ -7,7 +7,7 @@ This Magisk module attempts to enable 6GHz WiFi and Hotspot capabilities on supp
 - ✅ Enables 6GHz Hotspot support
 - ✅ Country code selectable via Magisk "Action" button
 - ✅ Automatic Updates via Magisk app
-- ✅ Uses `cmd wifi force-country-code enable` for reliable WiFi configuration
+- ✅ Uses `cmd wifi force-country-code enabled` for reliable WiFi configuration
 - ✅ No volume key interaction needed during installation
 
 ## Requirements

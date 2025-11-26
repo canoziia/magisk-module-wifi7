@@ -1,7 +1,7 @@
 id=wifi7_6ghz_enabler
 name=WiFi 7 / 6GHz Enabler
-version=v1.1.0
-versionCode=1106
+version=v1.1.1
+versionCode=1116
 author=DarkNightLab
 description=Enables 6GHz WiFi and Hotspot by forcing country code. Selectable country code during install.
 updateJson=https://raw.githubusercontent.com/canoziia/magisk-module-wifi7/main/update.json
