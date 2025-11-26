@@ -1,0 +1,40 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up variables
+        id: vars
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          echo "ZIP_NAME=WiFi7_6GHz_Enabler-${GITHUB_REF#refs/tags/}.zip" >> $GITHUB_OUTPUT
+
+      - name: Build Magisk Module Zip
+        run: |
+          zip -r "${{ steps.vars.outputs.ZIP_NAME }}" . -x ".git/*" ".github/*" "README.md" ".gitignore"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ steps.vars.outputs.ZIP_NAME }}
+          name: Release ${{ steps.vars.outputs.VERSION }}
+          body: |
+            WiFi 7 / 6GHz Enabler Module ${{ steps.vars.outputs.VERSION }}
+            
+            **Changelog:**
+            - Initial release
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,6 @@
+id=wifi7_6ghz_enabler
+name=WiFi 7 / 6GHz Enabler
+version=v1.0.0
+versionCode=100
+author=DarkNightLab
+description=Enables 6GHz WiFi and Hotspot by forcing country code. Selectable country code during install.

@@ -1,0 +1,3 @@
+# Force 6GHz support flags
+ro.wifi.6ghz.enabled=true
+config.disable_wifi_6ghz=false

@@ -1,0 +1,8 @@
+.DS_Store
+*.zip
+!module.prop
+!customize.sh
+!service.sh
+!system.prop
+!README.md
+!.github
