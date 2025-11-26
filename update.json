@@ -1,12 +1,6 @@
 {
-<<<<<<< HEAD
-  "version": "v1.0.11",
-  "versionCode": 1764150941,
-  "zipUrl": "https://github.com/canoziia/magisk-module-wifi7/releases/download/v1.0.11/WiFi7_6GHz_Enabler-v1.0.11.zip",
-=======
   "version": "v1.0.12",
-  "versionCode": 112,
+  "versionCode": 1764151155,
   "zipUrl": "https://github.com/canoziia/magisk-module-wifi7/releases/download/v1.0.12/WiFi7_6GHz_Enabler-v1.0.12.zip",
->>>>>>> cd65d7c (Fix zip structure with unified command - v1.0.12)
   "changelog": "https://raw.githubusercontent.com/canoziia/magisk-module-wifi7/main/README.md"
 }
